@@ -1,12 +1,66 @@
-# React + Vite
+The goal was to convert a static HTML website template into a React application by breaking the template into modular and reusable components.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✅ Work Done
+Set Up the React Project
 
-Currently, two official plugins are available:
+Used Vite to scaffold a fast React environment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Installed required dependencies like react, react-dom, and gh-pages for deployment.
 
-## Expanding the ESLint configuration
+Analyzed the HTML Template
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Reviewed the HTML file to identify repeated or logically grouped elements such as the header, footer, and content sections.
+
+Created React Components
+Extracted sections of the HTML into the following React components:
+
+Component Name	Description
+Header.jsx	Contains the logo and navigation menu.
+Footer.jsx	Contains copyright and social links.
+Home.jsx	Hero section or main content visible on page load.
+About.jsx	About us information section.
+Contact.jsx	Contact form or details section.
+Navbar.jsx (optional)	If the nav bar was separate from the header.
+
+Converted HTML to JSX
+
+Changed all class attributes to className.
+
+Made sure all self-closing tags were properly closed (<img />, <input />, etc.).
+
+Replaced hardcoded paths if needed.
+
+Structured the App
+
+Created a components/ folder to store all component files.
+
+Assembled all components in App.jsx for rendering.
+
+jsx
+Copy
+Edit
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Home />
+      <About />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+🧠 Learnings
+Learned to structure a React app with reusable components.
+
+Understood JSX conversion and React syntax rules.
+
+Improved understanding of component hierarchy and modular development.
