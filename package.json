@@ -1,13 +1,12 @@
 {
-  "homepage": "https://rohail2025.github.io/demo3",
-  "name": "react-lists-lab2",
+  "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
